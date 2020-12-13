@@ -1,16 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Real World Ready - Community Project - Flash Cards</title>
-      
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css'>
-      
-      
-    <link rel="stylesheet" href="style.css">
-      <script>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - #CodePenChallenge - &lt;dt&gt; and &lt;dd&gt;</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css'>
+  
+<style>
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f9fd;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.container {
+  margin: auto;
+  padding: 30px 40px;
+  width: auto;
+}
+.container h1 {
+  text-align: center;
+  color: #346eda;
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+.container h2 {
+  text-align: center;
+  color: rgba(34, 87, 185, 0.3);
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+dl card {
+  color: #fff;
+  font-size: 2em;
+  position: relative;
+  text-align: center;
+  border-radius: 3px;
+  min-height: 250px;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+}
+dl card dt, dl card dd {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  border-radius: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+dl card dt {
+  background: #5f8de2;
+  background: linear-gradient(5deg, #3fb3e9, #5f8de2);
+  z-index: 2;
+  transform: rotateX(0deg);
+}
+dl card dd {
+  background: #f38961;
+  background: linear-gradient(5deg, #fb404b, #f38961);
+  transform: rotateX(180deg);
+  margin: 0;
+}
+dl card dd:before {
+  content: attr(part) ".";
+  font-style: italic;
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+dl [class*="-slide"] {
+  transition: all 0.5s ease;
+  transform: scale(1);
+  perspective: 1500px;
+  margin: 40px 25px;
+  outline: none;
+  opacity: 0.8;
+}
+dl [class*="-current"] {
+  transform: scale(1.1);
+  cursor: pointer;
+  opacity: 1;
+}
+dl [class*="-current"].flip card {
+  transform: rotateX(180deg);
+}
+</style>
+
+  <script>
   window.console = window.console || function(t) {};
 </script>
 
@@ -22,74 +120,82 @@
     window.parent.postMessage("resize", "*");
   }
 </script>
-  </head>
-  <body>
-    <div class="container">
 
-        <h1>Flash Cards For Comptia A+</h1>
-        <h2>Using &lt;dl&gt;, &lt;dt&gt;, and &lt;dd&gt;</h2>
 
-        <dl>
-            <card>
-                <dt>Bolster</dt>
-                <dd part="verb">to support, strengthen, or fortify</dd>
-            </card>
-            <card>
-                <dt>Capitalize</dt>
-                <dd part="verb">to use to your advantage</dd>
-            </card>
-            <card>
-                <dt>Cultivate</dt>
-                <dd part="verb">to foster the growth of</dd>
-            </card>
-            <card>
-                <dt>Deficient</dt>
-                <dd part="adjective">not enough in degree or amount</dd>
-            </card>
-            <card>
-                <dt>Eloquent</dt>
-                <dd part="adjective">having refined or expressive communication skills</dd>
-            </card>
-            <card>
-                <dt>Ferocity</dt>
-                <dd part="noun">viciousness, violence</dd>
-            </card>
-        </dl>
+</head>
 
-    </div>
+<body translate="no" >
+  <div class="container">
+  
+  <h1>SAT Vocabulary Flashcards</h1>
+  <h2>Using &lt;dl&gt;, &lt;dt&gt;, and &lt;dd&gt;</h2>
+  
+  <dl>
+    <card>
+      <dt>Bolster</dt>
+      <dd part="verb">to support, strengthen, or fortify</dd>
+    </card>
+    <card>
+      <dt>Capitalize</dt>
+      <dd part="verb">to use to your advantage</dd>
+    </card>
+    <card>
+      <dt>Cultivate</dt>
+      <dd part="verb">to foster the growth of</dd>
+    </card>
+    <card>
+      <dt>Deficient</dt>
+      <dd part="adjective">not enough in degree or amount</dd>
+    </card>
+    <card>
+      <dt>Eloquent</dt>
+      <dd part="adjective">having refined or expressive communication skills</dd>
+    </card>
+    <card>
+      <dt>Ferocity</dt>
+      <dd part="noun">viciousness, violence</dd>
+    </card>
+  </dl>
+  
+</div>
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js'></script>
-<script id="rendered-js" >
+      <script id="rendered-js" >
 var definitionList = $('dl');
 
 definitionList.on('init', function () {
-$('.slick-current', this).addClass('flip');
+  $('.slick-current', this).addClass('flip');
 });
 
 definitionList.slick({
-centerMode: true,
-arrows: false,
-centerPadding: '20px',
-slidesToShow: 3,
-responsive: [{
-breakpoint: 950,
-settings: {
-slidesToShow: 1,
-centerPadding: '10px' } }] });
+  centerMode: true,
+  arrows: false,
+  centerPadding: '20px',
+  slidesToShow: 3,
+  responsive: [{
+    breakpoint: 950,
+    settings: {
+      slidesToShow: 1,
+      centerPadding: '10px' } }] });
 
 
 
 
 definitionList.on('beforeChange', function () {
-$('.slick-slide', this).removeClass('flip');
+  $('.slick-slide', this).removeClass('flip');
 });
 
 definitionList.on('click', '.slick-current', function () {
-$(this).toggleClass('flip');
+  $(this).toggleClass('flip');
 });
 //# sourceURL=pen.js
-</script>
-  </body>
+    </script>
+
+  
+
+</body>
+
 </html>
+ 
