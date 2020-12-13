@@ -3,8 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Real World Ready - Community Project - Flash Cards</title>
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css'>
+      
+      
     <link rel="stylesheet" href="style.css">
-    <script src="flashcard.js"></script>
+      <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
   </head>
   <body>
     <div class="container">
@@ -40,6 +57,39 @@
         </dl>
 
     </div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js'></script>
+<script id="rendered-js" >
+var definitionList = $('dl');
+
+definitionList.on('init', function () {
+$('.slick-current', this).addClass('flip');
+});
+
+definitionList.slick({
+centerMode: true,
+arrows: false,
+centerPadding: '20px',
+slidesToShow: 3,
+responsive: [{
+breakpoint: 950,
+settings: {
+slidesToShow: 1,
+centerPadding: '10px' } }] });
+
+
+
+
+definitionList.on('beforeChange', function () {
+$('.slick-slide', this).removeClass('flip');
+});
+
+definitionList.on('click', '.slick-current', function () {
+$(this).toggleClass('flip');
+});
+//# sourceURL=pen.js
+</script>
   </body>
 </html>
