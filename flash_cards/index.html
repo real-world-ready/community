@@ -4,110 +4,16 @@
 <head>
 
   <meta charset="UTF-8">
-  
-<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
-<meta name="apple-mobile-web-app-title" content="CodePen">
 
-<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+  <title>Flashcards Comptia A+ - Practice Questions 220-1001</title>
 
-<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
-
-
-  <title>Flashcard - Comptia A+ (AC)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css'>
   
-<style>
-@import url("https://fonts.googleapis.com/css?family=Varela+Round");
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background: #f6f9fd;
-  font-family: 'Varela Round', sans-serif;
-}
-
-.container {
-  margin: auto;
-  padding: 30px 40px;
-  width: auto;
-}
-.container h1 {
-  text-align: center;
-  color: #346eda;
-  font-weight: normal;
-  margin-bottom: 0px;
-}
-.container h2 {
-  text-align: center;
-  color: rgba(0, 0, 0, 255);
-  font-weight: normal;
-  margin-top: 5px;
-
-}
-
-dl card {
-  color: #000000;
-  font-size: 2em;
-  position: center;
-  text-align: center;
-  border-radius: 3px;
-  min-height: 375px;
-  transition: all 0.5s ease;
-  transform-style: preserve-3d;
-}
-dl card dt, dl card dd {
-  backface-visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  border-radius: inherit;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-}
-dl card dt {
-  background: #5f8de2;
-  background: linear-gradient(5deg, #3fb3e9, #5f8de2);
-  z-index: 2;
-  transform: rotateX(0deg);
-}
-dl card dd {
-  background: #f38961;
-  background: linear-gradient(5deg, #fb404b, #f38961);
-  transform: rotateX(180deg);
-  margin: 0;
-}
-#dl card dd:before {
-  content: attr(part) ".";
-  font-style: italic;
-  font-size: 0.8em;
-  opacity: 0.7;
-}
-dl [class*="-slide"] {
-  transition: all 0.5s ease;
-  transform: scale(1);
-  perspective: 1500px;
-  margin: 40px 25px;
-  outline:  none;
-  opacity: 0.8;
-}
-dl [class*="-current"] {
-  transform: scale(1.1);
-  cursor: pointer;
-  opacity: 1;
-}
-dl [class*="-current"].flip card {
-  transform: rotateX(180deg);
-}
-</style>
+  <link rel='stylesheet' href='style.css'>
 
   <script>
   window.console = window.console || function(t) {};
@@ -127,12 +33,7 @@ dl [class*="-current"].flip card {
 
 <body translate="no" >
   <div class="container">
-  
-      <h1><strong>CompTIA A+ Flashcards</strong></h1>
-        </br>
-        </br>
-        </br>
-        </br>
+      <h1><strong>CompTIA A+ Flashcards</strong></h1> 
 
 <h2><u>Networking:</u></h2>
  
@@ -266,7 +167,7 @@ dl [class*="-current"].flip card {
     </card>
 
 </dl>
-    </br>
+
 <h2><u>Mobile Devices:</u></h2>
 
 <dl>
@@ -294,28 +195,19 @@ dl [class*="-current"].flip card {
      <card>
       <dt>What is the difference between the walled garden system of the iOS App Store and the open platform of the Google Play Store?</dt>
       <dd>The walled garden system of the iOS App store means that Apple must approve all software that is put on the App Store and nothing is added without the permission of Apple. The open platform of the Google Play Store means that any developers can add their apps to the store and they do not need to be vetted by Google.
-</dd>
+        </dd>
     </card>
 </dl>
 
-</br>
 
 
 
-
-
-
-
-
-
-
-
-      
 </div>
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js'></script>
+    
       <script id="rendered-js" >
 var definitionList = $('dl');
 
@@ -334,9 +226,6 @@ definitionList.slick({
       slidesToShow: 1,
       centerPadding: '10px' } }] });
 
-
-
-
 definitionList.on('beforeChange', function () {
   $('.slick-slide', this).removeClass('flip');
 });
@@ -347,9 +236,5 @@ definitionList.on('click', '.slick-current', function () {
 //# sourceURL=pen.js
     </script>
 
-  
-
 </body>
-
 </html>
- 

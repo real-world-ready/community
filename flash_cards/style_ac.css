@@ -1,3 +1,4 @@
+<style>
 @import url("https://fonts.googleapis.com/css?family=Varela+Round");
 * {
   box-sizing: border-box;
@@ -21,24 +22,25 @@ body {
 }
 .container h2 {
   text-align: center;
-  color: rgba(34, 87, 185, 0.3);
+  color: rgba(0, 0, 0, 255);
   font-weight: normal;
   margin-top: 5px;
+
 }
 
 dl card {
-  color: #fff;
-  font-size: 1em;
-  position: relative;
-  text-align: left;
+  color: #000000;
+  font-size: 2em;
+  position: center;
+  text-align: center;
   border-radius: 3px;
-  min-height: 250px;
+  min-height: 375px;
   transition: all 0.5s ease;
   transform-style: preserve-3d;
 }
 dl card dt, dl card dd {
   backface-visibility: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -48,7 +50,7 @@ dl card dt, dl card dd {
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 40px;
+  padding: 5px;
 }
 dl card dt {
   background: #5f8de2;
@@ -62,7 +64,7 @@ dl card dd {
   transform: rotateX(180deg);
   margin: 0;
 }
-dl card dd:before {
+#dl card dd:before {
   content: attr(part) ".";
   font-style: italic;
   font-size: 0.8em;
@@ -73,7 +75,7 @@ dl [class*="-slide"] {
   transform: scale(1);
   perspective: 1500px;
   margin: 40px 25px;
-  outline: none;
+  outline:  none;
   opacity: 0.8;
 }
 dl [class*="-current"] {
@@ -84,3 +86,4 @@ dl [class*="-current"] {
 dl [class*="-current"].flip card {
   transform: rotateX(180deg);
 }
+</style>
